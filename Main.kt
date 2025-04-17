@@ -19,7 +19,7 @@ fun main() {
     while (true) {
         try {
             print("Ваш вибір (1-5, або 0 для завершення): ")
-            val choice = readln().toIntOrNull() ?: 0
+            val choice = readln().toInt()
 
             if (choice == 0) break
 
