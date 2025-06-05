@@ -1,10 +1,10 @@
 fun main() {
-    val menu = mutableListOf(
+    val menu = mutableListOf<Pair<String?, Int>>(
         Pair("Піца", 180),
         Pair("Бургер", 120),
         Pair("Суші", 250),
         Pair("Паста", 150),
-        Pair("Салат", 90)
+        Pair("Суп", 90)
     )
 
     var total = 0
@@ -19,7 +19,8 @@ fun main() {
     while (true) {
         try {
             print("Ваш вибір (1-5, або 0 для завершення): ")
-            val choice = readln().toInt()
+			
+            val choice = readln().toIntOrNull()
 
             if (choice == 0) break
 
